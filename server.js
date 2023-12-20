@@ -3,6 +3,7 @@ import Mot from './models/Mot.js';
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+app.use('/public', express.static('public'));
 
 const mots = await Mot.loadMany();
 var cote = 'pas repondu';

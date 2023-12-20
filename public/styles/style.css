@@ -4,6 +4,16 @@ table {
 
 #faux {
     color: red;
+
+}
+
+#traduction {
+    font-weight: bold;
+}
+
+
+#anglais {
+    font-weight: bold;
 }
 
 td, th /* Mettre une bordure sur les td ET les th */ {

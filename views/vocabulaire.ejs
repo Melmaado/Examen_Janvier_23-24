@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <title>Vocabulary</title>
-    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../public/styles/style.css" rel="stylesheet">
 </head>
 
 <table>
@@ -13,7 +13,7 @@
     </tr>
     <% for(mot of mots) { %>
         <tr>
-            <td>
+            <td id="colonne_1">
                 <%=mot.mot_en %>
             </td>
             <td>
@@ -36,3 +36,5 @@
     Translation : <input name="translation" />
     <input type="submit" value="Submit" />
 </form>
+
+<a href="/">Test page</a>
