@@ -1,0 +1,20 @@
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link href="../styles/style.css" rel="stylesheet">
+</head>
+<h1>Test yourself</h1>
+
+<% if(cote=='faux' ){ %>
+    <span id="faux">Unfortunately, <%=mot_precedent.mot_en%> is <%=mot_precedent.mot_fr%></span>
+
+    <% } %>
+        <br>
+        <br>
+        how do you say <b>"<%=mot_actuel.mot_en%>"</b> ?
+        <form action="/repondre" method="POST">
+            <input name="proposition" />
+            <input type="submit" value="submit" />
+        </form>
+
+        <a href="/vocabulaire">Page de vocabulaire</a>

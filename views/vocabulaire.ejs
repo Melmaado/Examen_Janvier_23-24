@@ -1,0 +1,38 @@
+<head>
+    <meta charset="utf-8">
+    <title>Vocabulary</title>
+    <link href="../styles/style.css" rel="stylesheet">
+</head>
+
+<table>
+    <tr>
+        <th>Word</th>
+        <th>Translation</th>
+        <th></th>
+        <th>Actions</th>
+    </tr>
+    <% for(mot of mots) { %>
+        <tr>
+            <td>
+                <%=mot.mot_en %>
+            </td>
+            <td>
+                <%=mot.mot_fr %>
+            </td>
+            <td>
+                <%=(mot.juste /mot.essai)*100%> %
+            </td>
+            <td>
+                <a href="/delete/<%= mot.id_mot %>">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+</table>
+
+<h2>Add a new word</h2>
+
+<form action="/vocabulaire/add" method="POST">
+    Word : <input name="word" />
+    Translation : <input name="translation" />
+    <input type="submit" value="Submit" />
+</form>
